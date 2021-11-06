@@ -27,6 +27,7 @@ export const UserProfile: React.FC<UserProfileProps> = ({ user }) => {
         <p>{user.premium_type ? premiumPlans[user.premium_type] : 'Unknown'}</p>
       </div>
       <div>
+        { /* eslint-disable-next-line @next/next/no-html-link-for-pages */ }
         <a href="/api/oauth/revoke">Revoke Token</a>
       </div>
     </div>

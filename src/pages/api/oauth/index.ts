@@ -13,10 +13,9 @@ export default async function oauth(
     const clientId = getEnvironment('OAUTH_CLIENT_ID')
     const state = randomBytes(32)
       .toString('base64')
-      .replaceAll('+', '-')
-      .replaceAll('/', '_')
-      .replaceAll('=', '')
-      .trim()
+      .replace(/\+/g, '-')
+      .replace(/\//g, '_')
+      .replace(/=/g, '')
     const scope = ['identify']
 
     const authorizeUrl = new URL(OAuth2Routes.authorizationURL)

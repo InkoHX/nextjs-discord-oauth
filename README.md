@@ -1,1 +1,1 @@
-# discord-oauth-with-nextjs
+# nextjs-discord-oauth

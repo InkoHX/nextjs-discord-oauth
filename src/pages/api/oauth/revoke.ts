@@ -43,7 +43,7 @@ export default async function revoke(
       'Set-Cookie',
       process.env.NODE_ENV === 'development'
         ? 'accessToken=null; Path=/; SameSite=Lax; Expires; HttpOnly'
-        : '__Host-accessToken=null; Path=/; SameSite=Lax; Secure; Expires; HttpOnly'
+        : 'accessToken=null; Path=/; SameSite=Lax; Secure; Expires; HttpOnly'
     )
     response.redirect('/')
   } catch (error) {

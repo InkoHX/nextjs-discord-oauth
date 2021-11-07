@@ -11,7 +11,12 @@ export default async function oauth(
   try {
     const redirectUrl = getEnvironment('OAUTH_REDIRECT_URL')
     const clientId = getEnvironment('OAUTH_CLIENT_ID')
-    const state = randomBytes(32).toString('base64url')
+    const state = randomBytes(32)
+      .toString('base64')
+      .replaceAll('+', '-')
+      .replaceAll('/', '_')
+      .replaceAll('=', '')
+      .trim()
     const scope = ['identify']
 
     const authorizeUrl = new URL(OAuth2Routes.authorizationURL)

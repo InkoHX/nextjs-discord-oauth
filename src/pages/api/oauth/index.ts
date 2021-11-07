@@ -31,7 +31,7 @@ export default async function oauth(
       'Set-Cookie',
       process.env.NODE_ENV === 'development'
         ? `oauth_state=${state}; Path=/; SameSite=Lax; Expires; HttpOnly`
-        : `__Host-oauth_state=${state}; Path=/; SameSite=Lax; Secure; Expires; HttpOnly`
+        : `oauth_state=${state}; Path=/; SameSite=Lax; Secure; Expires; HttpOnly`
     )
     response.redirect(authorizeUrl.toString())
   } catch (error) {

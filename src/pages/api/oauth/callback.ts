@@ -70,7 +70,7 @@ export default async function callback(
       'Set-Cookie',
       process.env.NODE_ENV === 'development'
         ? `accessToken=${tokenResponse.access_token}; Max-Age=${tokenResponse.expires_in}; Path=/; SameSite=Lax; HttpOnly`
-        : `__Host-accessToken=${tokenResponse.access_token}; Max-Age=${tokenResponse.expires_in}; Path=/; SameSite=Lax; Secure; HttpOnly`
+        : `accessToken=${tokenResponse.access_token}; Max-Age=${tokenResponse.expires_in}; Path=/; SameSite=Lax; Secure; HttpOnly`
     )
     response.redirect('/')
   } catch (error) {

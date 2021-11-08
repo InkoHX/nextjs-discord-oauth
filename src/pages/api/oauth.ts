@@ -2,7 +2,7 @@ import { randomBytes } from 'crypto'
 import { OAuth2Routes } from 'discord-api-types/v9'
 import { NextApiRequest, NextApiResponse } from 'next'
 import { URL } from 'url'
-import { getEnvironment } from '../../../lib/env'
+import { getEnvironment } from '../../lib/env'
 
 export default async function oauth(
   _request: NextApiRequest,

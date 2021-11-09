@@ -1,6 +1,5 @@
 import { APIUser, RouteBases, Routes } from 'discord-api-types/v9'
 import { GetServerSideProps, NextPage } from 'next'
-import fetch from 'node-fetch'
 import { ErrorMessage } from '../components/ErrorMessage'
 import { UserProfile } from '../components/UserProfile'
 import { fetchAccessToken, revokeAccessToken } from '../lib/oauth'

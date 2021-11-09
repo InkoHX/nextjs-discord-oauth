@@ -2,7 +2,6 @@ import {
   RESTPostOAuth2AccessTokenResult,
   OAuth2Routes,
 } from 'discord-api-types/v9'
-import fetch from 'node-fetch'
 import { getEnvironment } from './env'
 
 export const fetchAccessToken = async (
